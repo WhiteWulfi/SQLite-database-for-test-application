@@ -1,0 +1,1 @@
+# SQLite-database-for-test-application
