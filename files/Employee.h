@@ -81,6 +81,7 @@ public:
 		std::stringstream employee_values{""};
 		employee_values << full_name << "', '" << date_of_birth.year << '-' << date_of_birth.month << '-' << date_of_birth.day << "', '" << (gender ? "Male" : "Female");
 		std::string sql_command{ "INSERT INTO " + table_name + " (Full_name, Date_of_birth, Gender) VALUES ('" + employee_values.str() + "');" };
+		// Пример результата INSERT INTO Employee (Full_name, Date_of_birth, Gender) VALUES (Иванов Иван Иванович, 2000-01-01, Male);
 
 		// Попытка выполнить составленный запрос
 		char* error_message{ nullptr };
@@ -136,4 +137,5 @@ std::istream& operator >> (std::istream& in, Employee& employee)
 }
 
 #endif
+
 
