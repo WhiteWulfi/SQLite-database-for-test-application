@@ -36,7 +36,7 @@ struct Date
 // Вспомогательная функция проверяющая дату на логическую верность (Не учитывает високосный год)
 bool is_correct_date(const Date& date)
 {
-	// условия для того, чтобы дата была верной - год > 0 и 12 >= месяц > 0 и 31 >= день > 0 
+	// условия для того, чтобы дата была верной: год > 0 и месяц > 0, 12 >= месяц и день > 0, 31 >= день
 	if ((date.year < 0) || (date.month < 1 || date.month > 12) || (date.day < 1 || date.day > 31)) return false;
 	return true;
 }
@@ -136,3 +136,4 @@ std::istream& operator >> (std::istream& in, Employee& employee)
 }
 
 #endif
+
